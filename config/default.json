@@ -1,0 +1,5 @@
+{
+
+    "mongoURI": "mongodb+srv://programmergaurav:programmergaurav@cluster0.0nujm.mongodb.net/text?retryWrites=true&w=majority",
+    "jwtSecret": "jwtSecret"
+}
