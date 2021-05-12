@@ -18,6 +18,8 @@ mongoose
 const port = process.env.PORT || 5000;
 
 app.use('/api/users', require('./routes/api/user'))
+app.use('/api/auth', require('./routes/api/auth'))
+
 app.listen(port, () => {
     console.log(`Server Running at http://localhost:${port}`)
 })
