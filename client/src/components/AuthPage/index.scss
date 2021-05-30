@@ -1,0 +1,20 @@
+.authpage {
+  height: calc(100vh - 58.6px);
+  .row {
+    height: 100%;
+  }
+  .form {
+    form {
+      padding: 0px 100px;
+    }
+    button {
+      width: 100%;
+    }
+    .link {
+      cursor: pointer;
+    }
+  }
+  .bgimage img {
+    width: 100%;
+  }
+}

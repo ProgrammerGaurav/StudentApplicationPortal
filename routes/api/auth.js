@@ -3,7 +3,11 @@ const bcrypt = require('bcryptjs')
 const config = require('config')
 const express = require('express')
 const router = express.Router()
-
+router.get('/', (req, res) => {
+    res.json({
+        "detail": "Method \"GET\" not allowed."
+    })
+})
 router.post('/', (req, res) => {
 
     const {
@@ -64,8 +68,8 @@ router.post('/', (req, res) => {
 
         // Check user
         User.findOne({
-                email
-            })
+            email
+        })
             .then(user => {
                 if (!user) {
                     return res.json({
@@ -85,11 +89,11 @@ router.post('/', (req, res) => {
                         }
 
                         jwt.sign({
-                                id: user.id
-                            },
+                            id: user.id
+                        },
                             config.get('jwtSecret'), {
-                                expiresIn: 3600
-                            },
+                            expiresIn: 3600
+                        },
                             (err, token) => {
                                 if (err) throw err;
                                 res.json({
